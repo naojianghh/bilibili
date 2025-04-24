@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    android:elevation="4dp"
+    android:background="@drawable/bg_snackbar">
+
+    <ImageView
+        android:id="@+id/toast_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/video_folder_select"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/toast_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="已加入\默认收藏夹\"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/change_folder_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改收藏夹"
+        android:textColor="#FF6F91"
+        android:background="@android:color/transparent"
+        android:onClick="onChangeFolderButtonClick"
+        android:clickable="true"/>
+
+</LinearLayout>

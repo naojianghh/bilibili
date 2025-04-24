@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_chevron_left_24"
+            android:id="@+id/searchVideo_return"/>
+
+        <TextView
+            android:layout_width="360dp"
+            android:layout_height="64dp"
+            android:background="@drawable/search"
+            android:gravity="center_vertical"
+            android:paddingLeft="48dp"
+            android:paddingRight="80dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="16dp"
+            android:id="@+id/searchVideo_tv"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_launcher_foreground"
+            android:id="@+id/searchVideo_search" />
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchVideo_rv"/>
+
+</LinearLayout>

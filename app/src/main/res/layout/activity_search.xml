@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:id="@+id/search_return"
+            android:src="@drawable/return_overall"
+            android:foreground="?attr/selectableItemBackground"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/search_sv"
+            app:iconifiedByDefault="false"
+            style="@style/CustomSearchView"
+            android:layout_gravity="center_horizontal"
+            android:paddingRight="48dp"
+            android:queryHint="搜索"/>
+
+        <ImageView
+            android:id="@+id/search_enter"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/search_button"
+            android:foreground="?attr/selectableItemBackground"/>
+
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_rv"/>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title=""
+        android:id="@+id/button_home"
+        android:icon="@drawable/icon_home"
+        />
+
+    <item android:title=""
+        android:id="@+id/button_focus"
+        android:icon="@drawable/icon_focus"/>
+
+    <item android:title=""
+        android:id="@+id/button_create"
+        android:icon="@drawable/icon_create"/>
+
+    <item android:title=""
+        android:id="@+id/button_shopping"
+        android:icon="@drawable/icon_shopping"/>
+
+    <item android:title=""
+        android:id="@+id/button_mine"
+        android:icon="@drawable/icon_mine"/>
+
+
+</menu>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_marginLeft="10.5dp"
+        android:layout_gravity="center"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:id="@+id/created_folders_favorites_expand"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackground"/>
+    <TextView
+        android:layout_marginLeft="9.5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="19sp"
+        android:text="@string/folders"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="・"
+        android:textSize="8sp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:textColor="@color/grey"/>
+    <TextView
+        android:id="@+id/created_folders_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/grey"/>
+
+
+</LinearLayout>

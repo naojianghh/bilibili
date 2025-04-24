@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="ui.home.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:id="@+id/top_linearlayout">
+
+        <ImageView
+            android:layout_marginLeft="16dp"
+            android:layout_width="0dp"
+            android:id="@+id/top_avatar"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/avatar"/>
+        <ImageView
+
+            android:layout_width="260dp"
+            android:id="@+id/top_search"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_top_search"
+            android:foreground="?attr/selectableItemBackground"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:id="@+id/top_game"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/game"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:id="@+id/top_news"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/news"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.tabs.TabLayout
+            app:tabBackground="@drawable/ripple_effect"
+            app:tabRippleColor="@android:color/transparent"
+            android:id="@+id/tab_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:tabTextAppearance="@style/TabTextStyle"
+            app:tabSelectedTextColor="@color/bilibili"
+            app:tabIndicatorColor="@color/bilibili"
+            app:tabMinWidth="64dp"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:id="@+id/tab_layout_fixed"
+            app:tabTextColor="@android:color/transparent"
+            app:tabIndicatorColor="@android:color/transparent"
+            app:tabIndicatorHeight="0dp">
+
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+    </LinearLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
