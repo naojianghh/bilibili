@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,14 +12,16 @@
         >
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="24dp"
             android:layout_height="match_parent"
-            android:src="@drawable/baseline_chevron_left_24"
+            android:layout_marginLeft="4dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:src="@drawable/return_overall"
             android:id="@+id/searchVideo_return"/>
 
         <TextView
-            android:layout_width="360dp"
-            android:layout_height="64dp"
+            android:layout_width="280dp"
+            android:layout_height="56dp"
             android:background="@drawable/search"
             android:gravity="center_vertical"
             android:paddingLeft="48dp"
@@ -26,13 +29,15 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:textSize="16dp"
-            android:id="@+id/searchVideo_tv"/>
+            android:id="@+id/searchVideo_tv"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"/>
 
         <ImageView
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="40dp"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_launcher_foreground"
+            android:foreground="?attr/selectableItemBackground"
+            android:src="@drawable/search_button"
             android:id="@+id/searchVideo_search" />
 
 

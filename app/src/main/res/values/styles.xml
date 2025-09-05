@@ -8,6 +8,13 @@
     <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">
         <item name="searchIcon">@android:color/transparent</item>
         <item name="closeIcon">@android:color/transparent</item>
+        <item name="queryBackground">@null</item>
     </style>
+
+    <style name="Theme.AppCompat.NoActionBar.FullScreen" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
 
 </resources>

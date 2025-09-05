@@ -6,13 +6,16 @@ public class FavoriteData {
     private int videoImageResourceId;
     private int videoListImageResourceId;
     private String folderName;
-    private int id;
+    private int id; // 数据库自增id
+    private int originalId; // 新增：原始Data的id
 
-    public FavoriteData(String description, int imageResourceId, int videoImageResourceId, int videoListImageResourceId) {
+    // 新增构造方法：传入originalId
+    public FavoriteData(String description, int imageResourceId, int videoImageResourceId, int videoListImageResourceId, int originalId) {
         this.description = description;
         this.imageResourceId = imageResourceId;
         this.videoImageResourceId = videoImageResourceId;
         this.videoListImageResourceId = videoListImageResourceId;
+        this.originalId = originalId;
     }
 
     public FavoriteData(String description, int imageResourceId, int videoImageResourceId, int videoListImageResourceId, String folderName) {
@@ -23,15 +26,27 @@ public class FavoriteData {
         this.folderName = folderName;
     }
 
-    public FavoriteData(String description, int imageResourceId, int videoImageResourceId, int videoListImageResourceId, String folderName, int id) {
+    // 修改构造方法：添加originalId参数
+    public FavoriteData(String description, int imageResourceId, int videoImageResourceId, int videoListImageResourceId, String folderName, int id, int originalId) {
         this.description = description;
         this.imageResourceId = imageResourceId;
         this.videoImageResourceId = videoImageResourceId;
         this.videoListImageResourceId = videoListImageResourceId;
         this.folderName = folderName;
         this.id = id;
+        this.originalId = originalId;
     }
 
+    // 新增getter/setter
+    public int getOriginalId() {
+        return originalId;
+    }
+
+    public void setOriginalId(int originalId) {
+        this.originalId = originalId;
+    }
+
+    // 其余方法不变...
     public String getFolderName() {
         return folderName;
     }

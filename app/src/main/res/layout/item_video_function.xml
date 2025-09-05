@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/like"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="260"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/like" />
+
+        <ImageView
+            android:id="@+id/dislike"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="240"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dislike" />
+
+        <ImageView
+            android:id="@+id/coin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="260"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/coin" />
+
+        <ImageView
+            android:id="@+id/collect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="240"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/collect" />
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="260"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/share" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:orientation="horizontal"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/like_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="234"
+            android:textSize="12sp"
+            android:textColor="@color/grey"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/dislike_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="不喜欢"
+            android:textSize="12sp"
+            android:textColor="@color/grey"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/coin_text"
+            android:layout_width="0dp"
+            android:textSize="12sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="234"
+            android:textColor="@color/grey"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/collect_text"
+            android:layout_width="0dp"
+            android:textSize="12sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="234"
+            android:textColor="@color/grey"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/share_text"
+            android:layout_width="0dp"
+            android:textSize="12sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="234"
+            android:textColor="@color/grey"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

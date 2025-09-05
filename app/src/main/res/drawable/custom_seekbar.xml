@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <!-- 轨道高度（摄影场景建议 2-4dp，避免过粗遮挡画面） -->
+            <size android:height="2dp" />
+            <!-- 背景色（浅灰，低透明度，减少视觉干扰） -->
+            <solid android:color="#333333" />
+            <!-- 圆角（避免尖锐边缘，更美观） -->
+            <corners android:radius="1dp" />
+        </shape>
+    </item>
+
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <corners android:radius="1dp" />
+                <solid android:color="#858585" />
+                <size android:height="6dp" /> <!-- 设置二级进度高度 -->
+            </shape>
+        </clip>
+    </item>
+
+    <!-- 2. 进度轨道（已选中部分） -->
+    <item android:id="@android:id/progress">
+        <clip> <!-- clip 标签：让进度轨道随进度值裁剪显示 -->
+            <shape android:shape="rectangle">
+                <size android:height="2dp" />
+                <!-- 进度色（摄影场景常用白色/橙色，高对比度易识别） -->
+                <solid android:color="#FE679A" />
+                <corners android:radius="1dp" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

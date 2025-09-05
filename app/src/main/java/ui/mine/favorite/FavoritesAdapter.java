@@ -53,7 +53,7 @@ public class FavoritesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(context, VideoActivity.class);
-                    intent.putExtra("videoId",favorites.get(position - 1).getId());
+                    intent.putExtra("videoId",favorites.get(position - 1).getOriginalId());
                     context.startActivity(intent);
                 }
             });
@@ -94,9 +94,11 @@ public class FavoritesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     public class FavoriteFunctionViewHolder extends RecyclerView.ViewHolder{
         TextView textViewSize;
+
         public FavoriteFunctionViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewSize = itemView.findViewById(R.id.folder_favorite_size);
+
         }
     }
 }

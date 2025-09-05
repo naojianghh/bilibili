@@ -3,6 +3,10 @@ package ui.mine;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import base.BaseFragment;
 import ui.mine.favorite.MyFavoritesActivity;
@@ -15,14 +19,13 @@ public class MineFragment extends BaseFragment {
 
     @Override
     protected void initViews() {
-        myFavorite = contentView.findViewById(R.id.mine_favorite);
-        myFavorite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(requireActivity(), MyFavoritesActivity.class);
-                startActivity(intent);
-            }
-        });
+
+        RecyclerView recyclerView = contentView.findViewById(R.id.mine_recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
+        MineRecyclerViewAdapter mineRecyclerViewAdapter = new MineRecyclerViewAdapter(requireContext());
+        recyclerView.setAdapter(mineRecyclerViewAdapter);
+
+
     }
 
     @Override

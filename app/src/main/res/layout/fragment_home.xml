@@ -10,20 +10,22 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:orientation="horizontal"
-        android:id="@+id/top_linearlayout">
+        android:id="@+id/top_linearlayout"
+        android:background="#FFFFFF">
 
         <ImageView
             android:layout_marginLeft="16dp"
-            android:layout_width="0dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="48dp"
+            android:layout_gravity="center_vertical"
             android:id="@+id/top_avatar"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/avatar"/>
+            android:layout_height="48dp"
+            android:src="@drawable/avatar_login"/>
         <ImageView
-
-            android:layout_width="260dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="200dp"
             android:id="@+id/top_search"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:src="@drawable/home_top_search"
             android:foreground="?attr/selectableItemBackground"/>
         <ImageView
@@ -56,6 +58,7 @@
             android:layout_weight="1"
             app:tabGravity="fill"
             app:tabMode="fixed"
+            android:background="#FFFFFF"
             app:tabTextAppearance="@style/TabTextStyle"
             app:tabSelectedTextColor="@color/bilibili"
             app:tabIndicatorColor="@color/bilibili"

@@ -1,8 +1,10 @@
 package ui;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
@@ -16,23 +18,39 @@ import base.BaseActivity;
 import ui.create.CreateFragment;
 import ui.focus.FocusFragment;
 import ui.home.HomeFragment;
+import ui.login.LoginActivity;
 import ui.mine.MineFragment;
 import ui.shopping.ShoppingFragment;
+import utils.SpUtils;
 
 public class MainActivity extends BaseActivity {
 
     private Fragment[] fragments;
     private int lastFragmentIndex = 0;
     private MenuItem previousMenuItem = null;
+    private String token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        token = SpUtils.getToken(this);
+
+
+        if (token == null) {
+            Intent intent = getIntent();
+            if (intent != null) {
+                token = intent.getStringExtra("token");
+            }
+        }
     }
+
+
 
     @SuppressLint("ResourceAsColor")
     @Override
     protected void initViews() {
+
         fragments = new Fragment[]{
                 new HomeFragment(),
                 new FocusFragment(),
@@ -67,7 +85,12 @@ public class MainActivity extends BaseActivity {
                     switchFragment(3);
                 }
                 else if (item.getItemId() == R.id.button_mine){
-                    switchFragment(4);
+                    if (token!=null && !token.isEmpty()) {
+                        switchFragment(4);
+                    } else {
+                        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                        startActivity(intent);
+                    }
                 }
 
                 if (previousMenuItem != null) {

@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/imageView5"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
@@ -31,7 +32,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.265"
-        android:textCursorDrawable="@color/bilibili"/>
+        android:textCursorDrawable="@drawable/cursor_color"/>
+
+    <ImageView
+        android:id="@+id/ivSelectedImage"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.148"
+        android:scaleType="centerCrop"/>
+
+    <Button
+        android:id="@+id/setPicture"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.148"
+        android:background="@color/white_transparent"/>
 
     <Button
         android:id="@+id/create_folder_return"

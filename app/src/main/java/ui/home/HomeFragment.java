@@ -2,6 +2,8 @@ package ui.home;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -19,7 +21,10 @@ import java.util.List;
 import Data.Data;
 import base.BaseFragment;
 import Bean.Bean;
+import ui.login.LoginActivity;
+import ui.mine.SpaceActivity;
 import ui.search.SearchActivity;
+import utils.SpUtils;
 
 
 public class HomeFragment extends BaseFragment {
@@ -27,10 +32,14 @@ public class HomeFragment extends BaseFragment {
     private List<Data> dataList;
     private HomeFragmentAdapter homeFragmentAdapter;
     private List<Bean> beans = new ArrayList<>();
+    private String token;
 
     @SuppressLint("ResourceAsColor")
     @Override
     protected void initViews() {
+
+        token = SpUtils.getToken(requireContext());
+
         Bean bean1 = new Bean("直播");
         beans.add(bean1);
         Bean bean2 = new Bean("推荐");
@@ -66,7 +75,41 @@ public class HomeFragment extends BaseFragment {
             }
         });
 
+        ImageView avatarImage = contentView.findViewById(R.id.top_avatar);
+        if (token!= null &&!token.isEmpty()) {
+            avatarImage.setImageResource(R.drawable.avatar);
+        } else {
+            avatarImage.setImageResource(R.drawable.avatar_login);
+        }
 
+        avatarImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (token!= null &&!token.isEmpty()) {
+                    Intent intent = new Intent(requireActivity(), SpaceActivity.class);
+                    startActivity(intent);
+
+                } else {
+                    Intent intent = new Intent(requireActivity(), LoginActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        token = SpUtils.getToken(requireContext());
+
+        ImageView avatarImage = contentView.findViewById(R.id.top_avatar);
+        if (token!= null &&!token.isEmpty()) {
+            avatarImage.setImageResource(R.drawable.avatar);
+        } else {
+            avatarImage.setImageResource(R.drawable.avatar_login);
+        }
     }
 
     @Override

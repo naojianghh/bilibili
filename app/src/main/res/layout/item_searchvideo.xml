@@ -5,7 +5,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="135dp"
+        android:layout_height="116dp"
         android:id="@+id/searchVideo_iv"/>
 
 </LinearLayout>

@@ -51,7 +51,7 @@ public class FavoriteDialogFragment extends BottomSheetDialogFragment  {
     private static final int NEW_FOLDER_NAME = 1;
 
     public FavoriteDialogFragment(Data data){
-        favorite = new FavoriteData(data.getDescription(),data.getImageResourceId(),data.getVideoImageResourceId(),data.getVideoListImageResourceId());
+        favorite = new FavoriteData(data.getDescription(),data.getImageResourceId(),data.getVideoImageResourceId(),data.getVideoListImageResourceId(),data.getId());
     }
 
     @Nullable

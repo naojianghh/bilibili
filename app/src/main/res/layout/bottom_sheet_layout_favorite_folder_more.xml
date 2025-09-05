@@ -3,11 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/white_transparent">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="114dp"
         android:src="@drawable/bottom_sheet_favorite_folder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

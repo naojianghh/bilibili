@@ -6,7 +6,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="54.5dp"
+        android:layout_height="48dp"
         android:src="@drawable/folder_favorite_function"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

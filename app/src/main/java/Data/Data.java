@@ -77,7 +77,7 @@ public class Data implements Serializable {
         dataList.add(new Data(11,"看懂中国法术！网上看到的法术是真实存...",R.drawable.data12,R.drawable.data12_video,R.drawable.data12_videolist,R.drawable.data12_information));
         dataList.add(new Data(12,"《 小 妖 精 的 秋 天 》",R.drawable.data13,R.drawable.data13_video,R.drawable.data13_videolist,R.drawable.data13_information));
         dataList.add(new Data(13,"野蔷薇村的冬天",R.drawable.data14,R.drawable.data14_video,R.drawable.data14_videolist,R.drawable.data14_information));
-        dataList.add(new Data(14,"开年最炸国产游戏！记忆被无数人侵犯！...",R.drawable.data15,R.drawable.data15_video,R.drawable.data15_videolist,R.drawable.data15_information));
+//        dataList.add(new Data(14,"开年最炸国产游戏！记忆被无数人侵犯！...",R.drawable.data15,R.drawable.data15_video,R.drawable.data15_videolist,R.drawable.data15_information));
 //        dataList.add(new Data(15,"",R.drawable.data16,R.drawable.data16_video,R.drawable.data16_videolist,R.drawable.data16_information));
 //        dataList.add(new Data(16,"",R.drawable.data17,R.drawable.data17_video,R.drawable.data17_videolist,R.drawable.data17_information));
 //        dataList.add(new Data(17,"",R.drawable.data18,R.drawable.data18_video,R.drawable.data18_videolist,R.drawable.data18_information));

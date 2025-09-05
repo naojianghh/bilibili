@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="212dp"
+    android:layout_marginTop="3dp"
+    app:cardCornerRadius="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 视频缩略图 -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="129.7dp">
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="129.7dp"
+                android:contentDescription="视频缩略图"
+                android:scaleType="centerCrop"
+                android:src="@drawable/video_loading"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/play_volume"
+                    android:layout_marginLeft="8dp"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/likes"
+                    android:paddingTop="1dp"
+                    android:layout_width="44dp"
+                    android:layout_height="15dp"
+                    android:text="11.1万"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="10sp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/comment"
+                    app:tint="@color/white"/>
+
+                <TextView
+                    android:id="@+id/collects"
+                    android:paddingTop="1dp"
+                    android:layout_width="40dp"
+                    android:layout_height="15dp"
+                    android:text="11.1万"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="10sp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/duration"
+                    android:paddingTop="1dp"
+                    android:layout_width="32dp"
+                    android:layout_height="15dp"
+                    android:text="11.1万"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="10sp"
+                    android:layout_marginLeft="6dp"
+                    android:textColor="@color/white"
+                    android:gravity="end"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!-- 视频标题 -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:paddingTop="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <!-- 作者信息和统计数据 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <!-- 作者头像 -->
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="作者头像"
+                    android:src="@drawable/avatar_up"/>
+
+                <!-- 作者名称 -->
+                <TextView
+                    android:id="@+id/up_name"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/darker_gray"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/video_more"
+                    android:layout_gravity="right" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
