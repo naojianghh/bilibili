@@ -56,3 +56,13 @@
 
 
 
+##  📌 项目演示
+
+ https://naojianghh.github.io/bilibili/show1.mp4 
+
+ https://naojianghh.github.io/bilibili/show2.mp4 
+
+ <video src="https://naojianghh.github.io/bilibili/show1.mp4" controls width="600">  你的浏览器不支持视频播放，请点击链接查看：https://用户名.github.io/仓库名/demo.mp4 </video> 
+
+ <video src="https://naojianghh.github.io/bilibili/show2.mp4" controls width="600">  你的浏览器不支持视频播放，请点击链接查看：https://用户名.github.io/仓库名/demo.mp4 </video> 
+
